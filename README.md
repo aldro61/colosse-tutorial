@@ -140,7 +140,9 @@ Now, your environment is all set and you are ready to launch an example experime
 
 ## Submitting jobs
 
-First, determine what your allocation number is by running `colosse-info`. This will print a lot of stuff, including your various computation allocations. In my case, it prints
+### Ressource allocation project
+
+First, determine what your ressource allocation project is by running `colosse-info`. This will print a lot of stuff, including your various computation allocations. In my case, it prints
 ```
 RAPI nne-790-aa: 0 used cores / 30 allocated cores (recent history)
 RAPI nne-790-ae: 39.2049 used cores / 180 allocated cores (recent history)
@@ -149,6 +151,7 @@ RAPI kyk-164-aa: 0 used cores / 30 allocated cores (recent history)
 ```
 but you might only have one. Pick the allocation you want to use and remember its identifier, e.g., nne-790-ae.
 
+### Submitting a job to the scheduler
 Now, open the [example_job.msub](example_job.msub) file provided with this tutorial. The file header gives the scheduler some information about your job:
 ```
 #!/bin/bash
@@ -160,3 +163,11 @@ Now, open the [example_job.msub](example_job.msub) file provided with this tutor
 #PBS -A nne-790-ae
 ```
 In this case, the requested compute time is 24 hours. The job requires 2 nodes, with 8 CPUs each. The stderr and stdout are redirected to user specified files. The name of the job is *myjob*. The ressource allocation to use is *nne-790-ae*.
+
+Copy the [example_job.msub](example_job.msub) file to a directory called *~/scratch/example_job*. To submit the job, use the following command.
+```
+msub example_job.msub
+```
+Our example job will run for 5 minutes, so it should not be queued for a long time.
+
+Once the job is submitted, you can use the `i` command to list the jobs that are in the waiting queue, i.e., the IDLE state. The `r` command shows all the jobs that are running and the `b` command shows all the jobs that are blocked, i.e., that the server refuses to run for the moment.
