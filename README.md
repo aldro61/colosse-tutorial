@@ -136,7 +136,7 @@ python setup.py install
 
 #### Installing other useful packages
 
-Run the following command.
+Run the following commands.
 ```
 pip install --upgrade pip
 pip install ipython scipy scikit-learn h5py pandas
