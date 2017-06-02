@@ -57,7 +57,7 @@ Colosse provides a lot of preinstalled software, which is made available through
 ### Searching for a specific module
 `module spider [keyword]`
 
-For example, running `module spider python` returns:
+For example, running `module spider gcc` returns:
 ```
 -----------------
   compilers/gcc:
