@@ -1,5 +1,6 @@
 # Colosse Tutorial
-Configuring your environment on the Colosse super computer @ Calcul Quebec
+
+This tutorial explains how to configure a basic Python environment and how to launch jobs on the Colosse super computer @ Calcul Quebec.
 
 ## Connecting to the supercomputer
 
