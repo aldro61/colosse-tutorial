@@ -4,9 +4,10 @@ This tutorial explains how to configure a basic Python environment and how to la
 
 **Table of contents:**
 1. [Connecting to the supercomputer](#connecting-to-the-supercomputer)
-2. [Modules](#modules)
-3. [Configuring your development environment](#configuring-your-development-environment)
-4. [Submitting jobs](#submitting-jobs)
+2. [File System](#file-system)
+3. [Modules](#modules)
+4. [Configuring your development environment](#configuring-your-development-environment)
+5. [Submitting jobs](#submitting-jobs)
 
 ## Connecting to the supercomputer
 
