@@ -179,4 +179,4 @@ Our example job will run for 5 minutes, so it should not be queued for a long ti
 
 Once the job is submitted, you can use the `i` command to list the jobs that are in the waiting queue, i.e., the IDLE state. The `r` command shows all the jobs that are running and the `b` command shows all the jobs that are blocked, i.e., that the server refuses to run for the moment.
 
-That's it. You can now submit jobs on Colosse.
+That's it! You can now submit jobs on Colosse.
