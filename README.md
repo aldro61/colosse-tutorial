@@ -86,29 +86,31 @@ There a two ways of getting a working Python installation on Colosse. The first 
 
 | Virtual Environment                                                                        | Anaconda |
 |--------------------------------------------------------------------------------------------|----------|
-| Pros: <ul><li>Some packages are optimized for the hardware</li><li>Don't need to download all packages, some are pre-downloaded</li></ul> | Pros: <ul><li>All dependencies are installed with the packages</li>  <li>Package version are updated if needed</li>  <li>Most scientific computing packages are preinstalled</li></ul>        |
-| Cons: <ul><li>Dependencies that are not available through modules must be installed manually</li></ul> | Cons: <ul><li>Uses a lot of disk space (~3 Gb)</li></ul>         |
+| Pros: <ul><li>Some packages are optimized for the hardware</li><li>Don't need to download all packages, some are pre-downloaded</li></ul> | Pros: <ul><li>All dependencies are installed with the packages</li>  <li>Package version are updated if needed</li><li>Installs more than just Python packages (e.g.: libraries)</li></ul>        |
+| Cons: Doesn't use the libraries provided by Colosse, which can sometimes be more efficient.<ul></ul>         |
 
-### Step 1: Downloading the Anaconda installer
+The regular version of the Anaconda package comes with a bunch of software preinstalled. To avoid using unnecessary disk space, we will use a lighter version called Miniconda. 
+
+### Step 1: Downloading the Miniconda installer
 
 * Python 2.7 (the one I use): 
 ```
-wget https://repo.continuum.io/archive/Anaconda2-4.4.0-Linux-x86_64.sh
+https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
 ```
 * Python 3.6: 
 ```
-wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 ### Step 2: Installing Anaconda
 
 * Python 2.7 (the one I use): 
 ```
-bash Anaconda3-4.4.0-Linux-x86_64.sh 
+bash Miniconda2-latest-Linux-x86_64.sh
 ```
 * Python 3.6: 
 ```
-bash Anaconda2-4.4.0-Linux-x86_64.sh 
+bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
 Follow the steps and answer all the questions. Most default answers are perfectly fine.
