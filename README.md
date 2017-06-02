@@ -143,7 +143,7 @@ pip install ipython scipy scikit-learn h5py pandas
 ```
 You can install any other package using pip.
 
-Now, your environment is all set and you are ready to launch an example experiment!
+Now, your environment is all set and you are ready to launch experiments!
 
 ## Submitting jobs
 
