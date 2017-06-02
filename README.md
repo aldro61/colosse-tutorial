@@ -27,6 +27,19 @@ Suivre sur Twitter/Follow on Twitter: https://twitter.com/CQ_Colosse
 
 Login nodes are used to prepare/launch/monitor jobs and to move files around. Do not use them to run code.
 
+## File system
+
+Colosse has various file systems, which have different properties listed [here](https://wiki.calculquebec.ca/w/Utiliser_l%27espace_de_stockage/en#tab=tab2). Basically, I use SCRATCH to run experiments and RAP to store results and data that must not be lost.
+
+* Scratch: This directory is placed on a parallel filesystem, Lustre (for Colosse, Mp2, Ms2 and Cottos) or GPFS (for Briarée and Guillimin). It is generally visible from all nodes. Using it is very fast for large files, but not very efficient for many small files. This is the appropriate place to store **large files** that you use for a **few days or weeks only**. Periodically, it may be **automatically cleaned** (files being deleted).
+
+In your home directory, run the following commands:
+```
+ln -s $SCRATCH scratch
+ln -s $RAP rap
+```
+This will create symbolic links to you scratch and rap folders, which have complicated paths.
+
 ## Modules
 
 Colosse provides a lot of preinstalled software, which is made available through modules.
@@ -59,6 +72,10 @@ module load [module name]
 ```
 
 For example, `module load compilers/gcc/4.8.5` loads version 4.8.5 of the gcc compiler.
+
+### Loading modules on login
+
+Manually loading modules each time you log in is tedious and can be avoided by using a `.bashrc` file. Copy [bashrc](.bashrc) file provided with this tutorial to the root of your home directory.
 
 ## Configuring your development environment
 
