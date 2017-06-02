@@ -101,7 +101,7 @@ First, create a virtual environment by using the following command at the root o
 ```
 virtualenv env
 ```
-Then, open up your *.bashrc* file and add the following line.
+Then, open up your *.bashrc* file and uncomment the following line in the *Software* section.
 ```
 source ~/env/bin/activate
 ```
@@ -137,3 +137,26 @@ pip install ipython scipy scikit-learn h5py pandas
 You can install any other package using pip.
 
 Now, your environment is all set and you are ready to launch an example experiment!
+
+## Submitting jobs
+
+First, determine what your allocation number is by running `colosse-info`. This will print a lot of stuff, including your various computation allocations. In my case, it prints
+```
+RAPI nne-790-aa: 0 used cores / 30 allocated cores (recent history)
+RAPI nne-790-ae: 39.2049 used cores / 180 allocated cores (recent history)
+RAPI agq-973-aa: 0 used cores / 30 allocated cores (recent history)
+RAPI kyk-164-aa: 0 used cores / 30 allocated cores (recent history)
+```
+but you might only have one. Pick the allocation you want to use and remember its identifier, e.g., nne-790-ae.
+
+Now, open the [example_job.msub](example_job.msub) file provided with this tutorial. The file header gives the scheduler some information about your job:
+```
+#!/bin/bash
+#PBS -l nodes=2:ppn=8,walltime=24:00:00
+#PBS -o stdout.out
+#PBS -e stderr.err
+#PBS -V
+#PBS -N myjob
+#PBS -A nne-790-ae
+```
+In this case, the requested compute time is 24 hours. The job requires 2 nodes, with 8 CPUs each. The stderr and stdout are redirected to user specified files. The name of the job is *myjob*. The ressource allocation to use is *nne-790-ae*.
