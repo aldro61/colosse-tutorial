@@ -25,9 +25,45 @@ Suivre sur Twitter/Follow on Twitter: https://twitter.com/CQ_Colosse
 ===========================================================================
 ```
 
-These nodes are used to prepare/launch/monitor jobs and to move files around. Do not use login nodes to run code.
+Login nodes are used to prepare/launch/monitor jobs and to move files around. Do not use them to run code.
 
 ## Modules
+
+Colosse provides a lot of preinstalled software, which is made available through modules.
+
+### Listing all available modules
+`module avail`
+
+### Searching for a specific module
+`module spider [keyword]`
+
+For example, running
+```
+module spider python
+```
+
+Returns:
+```
+-----------------
+  compilers/gcc:
+-----------------
+     Versions:
+        compilers/gcc/4.5
+        compilers/gcc/4.6
+        compilers/gcc/4.8
+        compilers/gcc/4.8.5
+        compilers/gcc/4.9
+        compilers/gcc/5.4
+```
+
+### Loading modules
+
+To use a module, you must first load it using the following command
+```
+module load [module name]
+```
+
+For example, `module load compilers/gcc/4.8.5` loads version 4.8.5 of the gcc compiler.
 
 ## Configuring your development environment
 
