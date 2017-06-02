@@ -2,7 +2,7 @@
 
 This tutorial explains how to configure a basic Python environment and how to launch jobs on the Colosse super computer @ Calcul Quebec. The official Colosse wiki can be found at: [https://wiki.calculquebec.ca](https://wiki.calculquebec.ca/w/Accueil).
 
-**Table of content:**
+**Table of contents:**
 1. Connecting to the supercomputer
 2. Modules
 3. Configuring your development environment
@@ -116,7 +116,7 @@ This will load you python environment when you login. Now, run `source ~/.bashrc
 
 #### Installing numpy
 
-Run the following command, which will tell numpy where the MKL library is located.
+Run the following command, which will tells numpy where the MKL library is located.
 ```
 cat > ~/.numpy-site.cfg << EOF
 [mkl]
