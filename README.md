@@ -2,6 +2,12 @@
 
 This tutorial explains how to configure a basic Python environment and how to launch jobs on the Colosse super computer @ Calcul Quebec.
 
+**Table of content:**
+1. Connecting to the supercomputer
+2. Modules
+3. Configuring your development environment
+4. Submitting jobs
+
 ## Connecting to the supercomputer
 
 To connect to Colosse, open a terminal and use the following command.
