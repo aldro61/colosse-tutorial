@@ -132,6 +132,7 @@ EOF
 
 Then, go to the *~/dev/git* directory and run the following commands.
 ```
+pip install cython
 git clone https://github.com/numpy/numpy.git
 cd numpy
 python setup.py install
