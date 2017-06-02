@@ -1,4 +1,4 @@
-# colosse-tutorial
+# Colosse Tutorial
 Configuring your environment on the Colosse super computer @ Calcul Quebec
 
 ## Modules
@@ -8,7 +8,7 @@ Configuring your environment on the Colosse super computer @ Calcul Quebec
 
 ### Installing Python
 
-There a two ways of getting a working Python installation on Colosse. The first is using the Python installation available through the `apps/python` module to create a virtual environement in your home directory. The second, which I prefer, is using the amazing amazing [Anaconda](https://www.continuum.io/downloads) package manager.
+There a two ways of getting a working Python installation on Colosse. The first is using the Python installation available through the `apps/python/x.y.z` module, where `x.y.z` is the version, to create a virtual environment in your home directory. The second, which I prefer, is using the [Anaconda](https://www.continuum.io/downloads) package manager.
 
 | Virtual Environment                                                                        | Anaconda |
 |--------------------------------------------------------------------------------------------|----------|
@@ -36,3 +36,5 @@ bash Anaconda3-4.4.0-Linux-x86_64.sh
 ```
 bash Anaconda2-4.4.0-Linux-x86_64.sh 
 ```
+
+Follow the steps and answer all the questions. Most default answers are perfectly fine.
