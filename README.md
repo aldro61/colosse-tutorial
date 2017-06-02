@@ -75,42 +75,65 @@ For example, `module load compilers/gcc/4.8.5` loads version 4.8.5 of the gcc co
 
 ### Loading modules on login
 
-Manually loading modules each time you log in is tedious and can be avoided by using a `.bashrc` file. Copy the [bashrc](.bashrc) file provided with this tutorial to the root of your home directory.
+Manually loading modules each time you log in is tedious and can be avoided by using a `.bashrc` file. 
+
+1. Copy the [bashrc](.bashrc) file provided with this tutorial to the root of your home directory. 
+2. Load it by running the following command, which will be run automatically on login.
+```
+source ~/.bashrc
+```
 
 ## Configuring your development environment
 
+### Directory structure
 
-### Installing Python
-
-There a two ways of getting a working Python installation on Colosse. The first is using the Python installation available through the `apps/python/x.y.z` module, where `x.y.z` is the version, to create a virtual environment in your home directory. The second, which I prefer, is using the [Anaconda](https://www.continuum.io/downloads) package manager.
-
-| Virtual Environment                                                                        | Anaconda |
-|--------------------------------------------------------------------------------------------|----------|
-| Pros: <ul><li>Some packages are optimized for the hardware</li><li>Don't need to download all packages, some are pre-downloaded</li></ul> | Pros: <ul><li>All dependencies are installed with the packages</li>  <li>Package version are updated if needed</li><li>Installs more than just Python packages (e.g.: libraries)</li></ul>        |
-| Cons: Doesn't use the libraries provided by Colosse, which can sometimes be more efficient.<ul></ul>         |
-
-The regular version of the Anaconda package comes with a bunch of software preinstalled. To avoid using unnecessary disk space, we will use a lighter version called Miniconda. 
-
-### Step 1: Downloading the Miniconda installer
-
-* Python 2.7 (the one I use): 
+In addition to the *scratch* and *rap* directories, I like to have a **dev** directory, where I keep all my code repositories. Run the following commands at the root of your home directory.
 ```
-https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
-```
-* Python 3.6: 
-```
-https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+mkdir dev
+mkdir dev/git
 ```
 
-### Step 2: Installing Anaconda
+### Configuring Python
 
-* Python 2.7 (the one I use): 
+#### Creating a virtual environment
+
+First, create a virtual environment by using the following command at the root of your home directory.
 ```
-bash Miniconda2-latest-Linux-x86_64.sh
+virtualenv env
 ```
-* Python 3.6: 
+Then, open up your *.bashrc* file and add the following line.
 ```
-bash Miniconda3-latest-Linux-x86_64.sh
+source ~/env/bin/activate
+```
+This will load you python environment when you login. Now, if you run `which python`, it should point to an executable in your virtual environment. 
+
+#### Installing numpy
+
+Run the following command, which will tell numpy where the MKL library is located.
+```
+cat > ~/.numpy-site.cfg << EOF
+[mkl]
+library_dirs = $MKLROOT/lib/intel64
+include_dirs = $MKLROOT/include
+mkl_libs = mkl_rt
+lapack_libs =
+EOF
 ```
 
-Follow the steps and answer all the questions. Most default answers are perfectly fine.
+Then, go to the *~/dev/git* directory and run the following commands.
+```
+git clone https://github.com/numpy/numpy.git
+cd numpy
+python setup.py install
+```
+
+#### Installing other useful packages
+
+Run the following command.
+```
+pip install --upgrade pip
+pip install ipython scipy scikit-learn h5py pandas
+```
+You can install any other package using pip.
+
+Now, your environment is all set and you are ready to launch an example experiment!
