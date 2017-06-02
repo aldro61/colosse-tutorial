@@ -159,7 +159,7 @@ RAPI kyk-164-aa: 0 used cores / 30 allocated cores (recent history)
 but you might only have one. Pick the allocation you want to use and remember its identifier, e.g., nne-790-ae.
 
 ### Submitting a job to the scheduler
-Now, open the [example_job.msub](example_job.msub) file provided with this tutorial. The file header gives the scheduler some information about your job:
+Now, open the [example_job.msub](example_job.msub) file provided with this tutorial. The file header gives the scheduler some information about your job. For example, the header could be
 ```
 #!/bin/bash
 #PBS -l nodes=2:ppn=8,walltime=24:00:00
