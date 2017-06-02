@@ -164,10 +164,12 @@ Now, open the [example_job.msub](example_job.msub) file provided with this tutor
 ```
 In this case, the requested compute time is 24 hours. The job requires 2 nodes, with 8 CPUs each. The stderr and stdout are redirected to user specified files. The name of the job is *myjob*. The ressource allocation to use is *nne-790-ae*.
 
-Copy the [example_job.msub](example_job.msub) file to a directory called *~/scratch/example_job*. To submit the job, use the following command.
+Copy the [example_job.msub](example_job.msub) file to a directory called *~/scratch/example_job*. Replace the ressource allocation project number by yours. Then, submit the job using the following command.
 ```
 msub example_job.msub
 ```
 Our example job will run for 5 minutes, so it should not be queued for a long time.
 
 Once the job is submitted, you can use the `i` command to list the jobs that are in the waiting queue, i.e., the IDLE state. The `r` command shows all the jobs that are running and the `b` command shows all the jobs that are blocked, i.e., that the server refuses to run for the moment.
+
+That's it. You can now submit jobs on Colosse.
