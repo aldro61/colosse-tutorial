@@ -169,7 +169,7 @@ Now, open the [example_job.msub](example_job.msub) file provided with this tutor
 #PBS -N myjob
 #PBS -A nne-790-ae
 ```
-In this case, the requested compute time is 24 hours. The job requires 2 nodes, with 8 CPUs each. The stderr and stdout are redirected to user specified files. The name of the job is *myjob*. The ressource allocation to use is *nne-790-ae*.
+In this case, the requested computing time is 24 hours. The job requires 2 nodes, with 8 CPUs each. The stderr and stdout are redirected to user specified files. The name of the job is *myjob*. The ressource allocation to use is *nne-790-ae*.
 
 Copy the [example_job.msub](example_job.msub) file to a directory called *~/scratch/example_job*. Replace the ressource allocation project number by yours. Then, submit the job using the following command.
 ```
