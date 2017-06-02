@@ -42,8 +42,10 @@ Colosse has various file systems, which have different properties listed [here](
 
 In your home directory, run the following commands:
 ```
-ln -s $SCRATCH scratch
-ln -s $RAP rap
+mkdir $SCRATCH/$user
+mkdir $RAP/$user
+ln -s $SCRATCH/$user scratch
+ln -s $RAP/$user rap
 ```
 This will create symbolic links to you scratch and rap folders, which have complicated paths.
 
