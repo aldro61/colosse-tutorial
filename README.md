@@ -75,7 +75,7 @@ For example, `module load compilers/gcc/4.8.5` loads version 4.8.5 of the gcc co
 
 ### Loading modules on login
 
-Manually loading modules each time you log in is tedious and can be avoided by using a `.bashrc` file. Copy [bashrc](.bashrc) file provided with this tutorial to the root of your home directory.
+Manually loading modules each time you log in is tedious and can be avoided by using a `.bashrc` file. Copy the [bashrc](.bashrc) file provided with this tutorial to the root of your home directory.
 
 ## Configuring your development environment
 
