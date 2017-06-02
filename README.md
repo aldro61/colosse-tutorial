@@ -112,7 +112,7 @@ Then, open up your *.bashrc* file and uncomment the following line in the *Softw
 ```
 source ~/env/bin/activate
 ```
-This will load you python environment when you login. Now, if you run `which python`, it should point to an executable in your virtual environment. 
+This will load you python environment when you login. Now, run `source ~/.bashrc` followed by `which python`. The last command should point to an executable in your virtual environment. 
 
 #### Installing numpy
 
