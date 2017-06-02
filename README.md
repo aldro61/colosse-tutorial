@@ -119,6 +119,12 @@ This will load you python environment when you login. Now, run `source ~/.bashrc
 
 #### Installing numpy
 
+First, run the following commands.
+```
+pip install --upgrade pip
+pip install cython
+```
+
 Run the following command, which will tells numpy where the MKL library is located.
 ```
 cat > ~/.numpy-site.cfg << EOF
@@ -132,7 +138,6 @@ EOF
 
 Then, go to the *~/dev/git* directory and run the following commands.
 ```
-pip install cython
 git clone https://github.com/numpy/numpy.git
 cd numpy
 python setup.py install
@@ -142,7 +147,6 @@ python setup.py install
 
 Run the following commands.
 ```
-pip install --upgrade pip
 pip install ipython scipy scikit-learn h5py pandas
 ```
 You can install any other package using pip.
