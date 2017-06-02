@@ -1,6 +1,32 @@
 # Colosse Tutorial
 Configuring your environment on the Colosse super computer @ Calcul Quebec
 
+## Connecting to the supercomputer
+
+To connect to Colosse, open a terminal and use the following command.
+```
+ssh username@colosse.calculquebec.ca
+```
+This will connect you to a login node. You should be greeted with a message like this:
+```
+===========================================================================
+Vous êtes sur un noeud de login de colosse (Calcul Québec).
+ - Nous n'effectuons pas de sauvegarde de vos fichiers.
+ - N'utilisez pas le noeud de login pour executer votre code.
+
+This is a Calcul Québec login node for colosse.
+ - There is no backup of users files.
+ - Do not use this node to run code.
+
+Rapportez tout problème à / Report any problems to: colosse@calculquebec.ca
+Documentation: https://wiki.calculquebec.ca/
+Suivre sur Twitter/Follow on Twitter: https://twitter.com/CQ_Colosse
+État des serveurs: http://serveurscq.computecanada.ca
+===========================================================================
+```
+
+These nodes are used to prepare/launch/monitor jobs and to move files around. Do not use login nodes to run code.
+
 ## Modules
 
 ## Configuring your development environment
