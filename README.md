@@ -6,6 +6,7 @@ This tutorial explains how to configure a basic Python environment and how to la
 3. [Modules](#modules)
 4. [Configuring your development environment](#configuring-your-development-environment)
 5. [Submitting jobs](#submitting-jobs)
+6. [Other useful info](#other-useful-info)
 
 ## Connecting to the supercomputer
 
@@ -186,3 +187,19 @@ Our example job will run for 5 minutes, so it should not be queued for a long ti
 Once the job is submitted, you can use the `i` command to list the jobs that are in the waiting queue, i.e., the IDLE state. The `r` command shows all the jobs that are running and the `b` command shows all the jobs that are blocked, i.e., that the server refuses to run for the moment.
 
 That's it! You can now submit jobs on Colosse.
+
+## Other useful info
+
+### Logging in without a password
+
+If you don't want to have to type your password every time you connect to Colosse, do the following:
+
+1. If you don't already have an ssh key for your computer, generate one by typing `ssh-keygen` in a terminal
+
+2. Copy the key to the supercomputer using the following command:
+
+```bash
+ssh-copy-id username@colosse.calculquebec.ca
+```
+
+3. Enter your password when prompted and you're done.
