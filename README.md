@@ -1,5 +1,3 @@
-# Colosse Tutorial
-
 This tutorial explains how to configure a basic Python environment and how to launch jobs on the Colosse super computer @ Calcul Quebec. The official Colosse wiki can be found at: [https://wiki.calculquebec.ca](https://wiki.calculquebec.ca/w/Accueil).
 
 **Table of contents:**
