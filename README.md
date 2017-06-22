@@ -203,3 +203,17 @@ ssh-copy-id username@colosse.calculquebec.ca
 ```
 
 3. Enter your password when prompted and you're done.
+
+### Copying files over ssh
+
+To copy files to the supercomputer, you can use the `scp` utility. For example, you could use this command to copy a directory called `mydir` on your computer to the `myremotedir` directory on Colosse.
+
+```bash
+scp -r mydir username@colosse.calculquebec.ca:myremotedir/
+```
+
+You could use a similar command to get the directory from Colosse:
+
+```bash
+scp -r username@colosse.calculquebec.ca:myremotedir/mydir/ .
+```
