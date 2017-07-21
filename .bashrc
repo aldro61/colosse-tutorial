@@ -8,7 +8,7 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
